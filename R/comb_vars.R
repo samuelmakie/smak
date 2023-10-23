@@ -3,7 +3,6 @@
 #'
 #' @description
 #' Combines multiple variables into one factor variable with level orders being preserved (ascendingly and nested)
-#'
 #' @param data A table of class data.frame
 #' @param vars Variables to be combined. Takes in a list of variables to generalise to multiple combinations with element names taken as names for the combined variables.
 #' @param sep Separator for the combined values
