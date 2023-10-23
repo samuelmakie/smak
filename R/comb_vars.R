@@ -57,3 +57,7 @@ comb_vars <- function(data, vars, sep = " ", drop = F){
 
   return(data)
 }
+
+git remote add origin https://github.com/samuelmakie/smak.git
+git branch -M main
+git push -u origin main
