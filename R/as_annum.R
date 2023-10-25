@@ -15,3 +15,4 @@ as_annum <- function(date, from = "09-01", sep = " ", format = "%Y"){
   output[which(is.na(date))] <- NA
   return(output)
 }
+
