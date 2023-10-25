@@ -1,7 +1,7 @@
 #' firstfunction
 #'
 #' @return String telling you somthing useless
-#' @export
+#' @exporti
 #'
 #' @examples firstfunction()
 
