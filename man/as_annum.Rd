@@ -13,10 +13,10 @@ as_annum(date, from = "09-01", sep = " ", format = "\%Y")
 
 \item{sep}{A separator string. Defaults to " ".}
 
-\item{format}{Format of the year. Defaults to "Y"}
+\item{format}{Format of the year to be returned. Defaults to "yyyy". Together with the sep argument, the year returned would be in the format "yyyy yyyy".}
 }
 \value{
-
+A vector of character strings indicating the year the list of dates belong.
 }
 \description{
 as_annum

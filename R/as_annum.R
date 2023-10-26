@@ -3,9 +3,9 @@
 #' @param date A list of date(s)
 #' @param from The first day of an annum in the format "mm-dd"
 #' @param sep A separator string. Defaults to " ".
-#' @param format Format of the year. Defaults to "Y"
+#' @param format Format of the year to be returned. Defaults to "yyyy". Together with the sep argument, the year returned would be in the format "yyyy yyyy".
 #'
-#' @return
+#' @return A vector of character strings indicating the year the list of dates belong.
 #' @export
 #'
 #' @examples
