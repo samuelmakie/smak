@@ -7,7 +7,13 @@
 as_annum(date, from = "09-01", sep = " ", format = "\%Y")
 }
 \arguments{
-\item{format}{}
+\item{date}{A list of date(s)}
+
+\item{from}{The first day of an annum in the format "mm-dd"}
+
+\item{sep}{A separator string. Defaults to " ".}
+
+\item{format}{Format of the year. Defaults to "Y"}
 }
 \value{
 

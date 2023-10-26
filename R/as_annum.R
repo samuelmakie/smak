@@ -1,9 +1,9 @@
 #' as_annum
 #'
-#' @param date
-#' @param from
-#' @param sep
-#' @param format
+#' @param date A list of date(s)
+#' @param from The first day of an annum in the format "mm-dd"
+#' @param sep A separator string. Defaults to " ".
+#' @param format Format of the year. Defaults to "Y"
 #'
 #' @return
 #' @export
