@@ -22,7 +22,7 @@ Note that issues will likely arise when dealing with dates. Try \link{as.Date2} 
 An object of class data.frame
 }
 \description{
-A modified \link{base-rbind}. Binds dataframes by rows according to column order from the left (ignores column names, unlike \code{base::rbind}) while allowing standarising column names and classes.
+A modified \link[base:cbind]{base::rbind}. Binds dataframes by rows according to column order from the left (ignores column names, unlike \code{base::rbind}) while allowing standarising column names and classes.
 }
 \details{
 Can be used for other goals, particularly standardising column names and/or classes among multiple dataframes
