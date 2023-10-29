@@ -2,3 +2,4 @@
 
 export(as_annum)
 export(comb_vars)
+export(rbind)
