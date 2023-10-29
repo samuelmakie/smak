@@ -7,22 +7,23 @@
 rbind(..., col_names = NULL, col_classes = NULL)
 }
 \arguments{
-\item{...}{Objects of class data.frame}
+\item{...}{One or more objects of class data.frame to be bound rowwise.}
 
-\item{col_names}{Names of the columns of the returned dataframe.
-Defaults to NULL, which would create new column names in the form "col_n". It could take a character vector.
-Column names could be inherited from a specific dataframe by specifying col_names as an integer indicating which dataframe from those provided by it's order or
-by specifying a dataframe object the column names would be inherited from.}
+\item{col_names}{Column names of the returned dataframe.
+Defaults to NULL, which creates new column names in the form "col_n".
+Can be a character vector, an integer indicating the nth dataframe among those provided from which the column names are inherited, or a dataframe from which the column names are inherited.}
 
 \item{col_classes}{Class of the column vectors in the returned dataframe.
-Defaults to NULL, which would create classes naturally.
-It could take a character vector of coersion functions (e.g. c(as.character, as.factor, as.Date2)).
-Classes could be inherited from a specific dataframe by specifying col_names as an integer indicating which dataframe from those provided by it's order or
-by specifying a dataframe object the classes would be inherited from.}
+Defaults to NULL, which creates classes naturally.
+Can be a vector of coercion functions (e.g. \verb{c(as.character, as.factor, as.Date2))}, an integer indicating the nth dataframe among those provided from which the classes are inherited, or a dataframe from which the classes are inherited.
+Note that issues will likely arise when dealing with dates. Try the as.Date2 function if it didn't work as expected, otherwise, user defined functions can be used (e.g. \code{c(as.character, function(x){as.Date(x, origin = "1970-01-01")})}).}
 }
 \value{
 An object of class data.frame
 }
 \description{
-rbind
+A modified \code{base::rbind}. Binds dataframes by rows according to column order from the left (ignores column names, unlike \code{base::rbind}) while allowing standarising column names and classes.
+}
+\details{
+Can be used for other goals, particularly standardising column names and/or classes among multiple dataframes
 }

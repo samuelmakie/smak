@@ -21,3 +21,6 @@ A vector of character strings indicating the year the list of dates belong.
 \description{
 as_annum
 }
+\examples{
+
+}
