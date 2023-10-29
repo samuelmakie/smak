@@ -10,7 +10,7 @@
 #'
 #' @examples
 as.Date2 <- function(x, format, tryFormats = c("%Y-%m-%d", "%Y/%m/%d", "%d-%m-%Y", "%d/%m/%Y")){
-  if(is.logiccal(x)){
+  if(is.logical(x)){
     output <- NA
   }else{
     output <- as.Date(x, format, tryFormats, optional = T)
