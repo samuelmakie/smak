@@ -19,12 +19,12 @@ rbind <- function(..., col_names = NULL, col_classes = NULL){
 
   df_list <- list(...)
 
-  col_names <- col_names_f(col_names, df_list)
+  col_names <- rbind_col_names(col_names, df_list)
 
   output <- lapply(df_list, FUN = function(x){setNames(x, col_names[1:length(x)])}) |>
     lapply(FUN = function(x){x[, col_names[-c(1:length(x))]] <- NA; return(x)}) |>
     do.call(what = rbind) |>
-    col_classes_f(col_classes = col_classes, df_list = df_list)
+    rbind_col_classes(col_classes = col_classes, df_list = df_list)
 
   return(output)
 
