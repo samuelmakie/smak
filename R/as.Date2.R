@@ -1,6 +1,6 @@
 
 #' as.Date2
-#' @description A modified [base::as.Date] such that the function still runs and Nreturns NA if coercion wasn't successful.
+#' @description A modified [base::as.Date] such that the function still runs and returns NA if coercion wasn't successful.
 #' @param x A vector
 #' @param format See [as.Date]
 #' @param tryFormats See [as.Date]

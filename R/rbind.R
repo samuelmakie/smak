@@ -1,6 +1,6 @@
 
 #' rbind
-#' @description A modified [base::rbind]. Binds dataframes by rows according to column order from the left (ignores column names, unlike `base::rbind`) while allowing standarising column names and classes.
+#' @description A modified [base::rbind]. Binds dataframes by rows according to column order from the left (ignores column names, unlike `base::rbind`) while allowing standardising column names and classes.
 #' @param ... One or more objects of class data.frame to be bound rowwise.
 #' @param col_names  Column names of the returned dataframe.
 #' Defaults to NULL, which creates new column names in the form "col_n".
