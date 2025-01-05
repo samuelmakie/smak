@@ -10,3 +10,4 @@ any_n <- function(x, n, any_symbol = "*", sep = "|"){
   gv_instruction <- paste0(sapply(xs, FUN = paste0, collapse = ""), collapse = sep)
   return(gv_instruction)
 }
+
