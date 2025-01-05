@@ -21,5 +21,5 @@ as.Date2(
 A date vector
 }
 \description{
-A modified \link[base:as.Date]{base::as.Date} such that the function still runs and Nreturns NA if coercion wasn't successful.
+A modified \link[base:as.Date]{base::as.Date} such that the function still runs and returns NA if coercion wasn't successful.
 }

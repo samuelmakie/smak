@@ -9,6 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
+library(devtools)
 ```
 
 
@@ -32,11 +33,18 @@ son_sep_23_2$ofsted_region[sample(nrow(son_sep_23_2), size = 100)] <- NA
 son_sep_23_2$total_number_of_pupils[sample(nrow(son_sep_23_2), size = 100)] <- NA
 son_sep_23_2$publication_date[sample(nrow(son_sep_23_2), size = 100)] <- NA
 son_sep_23_2$safeguarding_is_effective[sample(nrow(son_sep_23_2), size = 100)] <- NA}
-
 ```
 
 ```{r}
-class(son_sep_23)
+as_annum <- function(date, from = "09-01", sep = " ", format = "%Y"){
+  annum_ending <- as.numeric(format(date, format)) + as.integer(date >= as.Date(paste0(format(date, "%Y"), "-", from), format = "%Y-%m-%d"))
+  output <- paste0(annum_ending - 1, sep, annum_ending)
+  output[which(is.na(date))] <- NA
+  return(output)
+}
+
+as_annum(son_sep_23_2$publication_date)
+son_sep_23_2 |> mutate(year = as_annum(publication_date))
 ```
 
 ```{r}
@@ -136,6 +144,10 @@ subset2 <- function(x, condition) {
 subset2(sample_df, a >= 4)
 ```
 
+```{r}
+
+library(smak)
+```
 
 
 
