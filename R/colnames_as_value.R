@@ -23,16 +23,8 @@ colnames_as_value <- function(df){
   d2 <- lapply(d2, FUN = function(d2){list(x = d2, max = max(unlist(lapply(d2, FUN = function(d2){length(d2)}))))})
 
   # For the list of corresponding levels of the variable for each unique value and for each level of the variable, add the NAs to the "missing" slots, so that the list of corresponding levels of the variable can be turned into a data.frame for each unique value, then turn them into data.frames
-  d2 <- lapply(d2, FUN = function(d2){rownames_as_column(as.data.frame(t(as.data.frame(lapply(d2$x, FUN = function(x){c(x, rep(NA, d2$max - length(x)))})))), varname)})
+  d2 <- lapply(d2, FUN = function(d2){smak::rownames_as_column(as.data.frame(t(as.data.frame(lapply(d2$x, FUN = function(x){c(x, rep(NA, d2$max - length(x)))})))), varname)})
   return(d2)
 }
 
 
-# Define a function to be used in the lapply below separately as this is too long
-rownames_as_column <- function(df, col_name = "var"){
-  col <- data.frame(row.names(df))
-  names(col) <- col_name
-  df <- cbind(col, df)
-  row.names(df) <- NULL
-  return(df)
-}

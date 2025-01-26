@@ -16,7 +16,7 @@ rownames_as_column(df, col_name = "var")
 An object of class \code{data.frame}
 }
   \item{col_name}{
-Optional. Name of the column. Defaults to "var".
+Optional. Name of the column for the rownames. Defaults to "var".
 }
 }
 \details{
