@@ -45,7 +45,8 @@ categories <- sample(2:4, num_items, replace = TRUE)
 # Add a column for the number of categories, ensuring consistency across groups for the same item
 item_group$ncat <- rep(categories, each = 3)
 
-head(item_groups, 10)
+# Look at the data
+head(item_group, 10)
 
 syntax <- flexmirt_model_spec(
   ig = item_group,
